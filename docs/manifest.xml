@@ -68,7 +68,7 @@
       <bt:Urls>
         <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812"/> <!-- Update or remove this URL -->
         <bt:Url id="Commands.Url" DefaultValue="https://baileyknez.github.io/fantastic-octo-spork/src/commands/commands.html"/> <!-- Ensure this points to your commands.html -->
-        <bt:Url id="Taskpane.Url" DefaultValue="https://baileyknez.github.io/fantastic-octo-spork/src/taskpane/assets/taskpane.html"/> <!-- Update the task pane URL -->
+        <bt:Url id="Taskpane.Url" DefaultValue="https://baileyknez.github.io/fantastic-octo-spork/src/taskpane/taskpane.html"/> <!-- Update the task pane URL -->
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="Get started with your sample add-in!"/> <!-- Update title as needed -->
