@@ -27,11 +27,56 @@
     background-color: #ffe3e3;
     /* Light red for received messages */
 }
-
-
-
-html{
-    height: 100%;
-    width: 100%;
-    overflow: -moz-hidden-unscrollable;
+#chat .chat__conversation-panel {
+    background: var(--chat-panel-background);
+    border-radius: 12px;
+    padding: 0 1em;
+    height: 55px;
+    margin: 0.5em 0 0;
 }
+
+#chat .chat__conversation-panel__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
+
+.--dark-theme {
+    --chat-background: rgba(10, 14, 14, 0.95);
+    --chat-panel-background: #131719;
+    --chat-bubble-background: #14181a;
+    --chat-bubble-active-background: #171a1b;
+    --chat-add-button-background: #212324;
+    --chat-send-button-background: #8147fc;
+    --chat-text-color: #a3a3a3;
+    --chat-options-svg: #a3a3a3;
+}
+
+#chat .chat__conversation-board__message-container:not(:last-child) {
+    margin: 0 0 2em 0;
+}
+
+#chat .chat__conversation-board__message__person {
+    text-align: center;
+    margin: 0 1.2em 0 0;
+}
+
+#chat .chat__conversation-board__message__person__avatar {
+    height: 35px;
+    width: 35px;
+    overflow: hidden;
+    border-radius: 50%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    ms-user-select: none;
+    position: relative;
+}
+
+#chat .chat__conversation-board__message__context {
+    max-width: 55%;
+    align-self: flex-end;
+}
+
