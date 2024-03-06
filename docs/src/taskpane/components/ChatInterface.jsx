@@ -21,7 +21,10 @@ function ChatInterface({ websocket }) {
     };
 
     return (
-        <div>
+        <div className ='Wrapper'>
+            <div className='Messages'>
+
+            </div>
             <input
                 type="text"
                 value={message}

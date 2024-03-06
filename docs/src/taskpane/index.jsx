@@ -22,11 +22,11 @@ Office.onReady(() => {
     </FluentProvider>
   );
 });
-
+root.render(NextApp);
 if (module.hot) {
   module.hot.accept("./components/App", () => {
     const NextApp = require("./components/App").default;
-    root.render(NextApp);
+    //root.render(NextApp);
   });
 }
 
