@@ -6,7 +6,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 
-const urlDev = "https://localhost:3000/";
+const urlDev = "https://baileyknez.github.io/fantastic-octo-spork/";
 const urlProd = "https://baileyknez.github.io/fantastic-octo-spork/"; // CHANGE THIS TO YOUR PRODUCTION DEPLOYMENT LOCATION
 
 async function getHttpsOptions() {
