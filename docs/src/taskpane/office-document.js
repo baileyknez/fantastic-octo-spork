@@ -17,21 +17,29 @@ const insertText = async (text) => {
 const sendCurrentWorksheetData = () => {
   Excel.run(async (context) => {
     const sheet = context.workbook.worksheets.getActiveWorksheet();
-    console.log('Loading worksheet data...')
-    sheet.load('name'); // Explicitly load the 'name' property
 
+    // Load the 'name' property of the worksheet
+    sheet.load('name');
+
+    // Get the used range of the current worksheet
     const range = sheet.getUsedRange();
-    range.load('values'); // Adjust as needed to load relevant data
+    range.load('values'); // Load the 'values' property of the range
 
+    // Sync the context to retrieve the loaded properties
     await context.sync();
-    console.log('Serializing worksheet data...')
-    // Serialize current worksheet data
+
+    // Filter out completely empty rows and convert all values to strings
+    const convertedValues = range.values
+      .filter(row => row.some(cell => cell !== null && cell !== ''))
+      .map(row => row.map(cell => cell ? cell.toString() : ''));
+
+    // Serialize the current worksheet data
     const worksheetData = JSON.stringify({
-      sheetName: sheet.name, // Now you can safely access the 'name' property
-      data: range.values
+      sheetName: sheet.name, // Accessing the 'name' property
+      data: convertedValues
     });
-    console.log(`Sending worksheet data: \n ${worksheetData}`)
-    // Send serialized data to your API
+
+    // Send the serialized data to your API
     fetch('https://intellisync.ai/process-excel', {
       method: 'POST',
       headers: {
@@ -50,5 +58,8 @@ const sendCurrentWorksheetData = () => {
   });
 };
 
+
 export { insertText, sendCurrentWorksheetData };
+
+
 
