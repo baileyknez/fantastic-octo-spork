@@ -1,0 +1,29 @@
+.message-history {
+    max-height: 300px;
+    /* Adjust height as needed */
+    overflow-y: auto;
+    /* Makes the history scrollable */
+    padding: 10px;
+    background-color: #f0f0f0;
+    /* Light background for the container */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.message {
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+.message.sent {
+    background-color: #d1e7ff;
+    /* Light blue for sent messages */
+    text-align: right;
+}
+
+.message.received {
+    background-color: #ffe3e3;
+    /* Light red for received messages */
+}

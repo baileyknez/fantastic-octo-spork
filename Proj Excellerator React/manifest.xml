@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+           xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" 
+           xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" 
+           xsi:type="TaskPaneApp">
+  <Id>9fa946b2-3503-4ddd-a279-991cda4dc491</Id> <!-- Keep this ID or replace it with a new GUID -->
+  <Version>1.0.0.0</Version>
+  <ProviderName>IntelliSync AI</ProviderName> <!-- Update with your company/provider name -->
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Chat Add-in"/> <!-- Update the display name -->
+  <Description DefaultValue="Interact with the Chat service directly from Excel."/> <!-- Update the description -->
+  <IconUrl DefaultValue="https://intellisync.ai/add-in/assets/chat-icon-32.png"/> <!-- Update icon URL -->
+  <HighResolutionIconUrl DefaultValue="https://intellisync.ai/add-in/assets/chat-icon-64.png"/> <!-- Update high resolution icon URL -->
+  <SupportUrl DefaultValue="https://www.intellisync.ai/contact"/> <!-- Update support URL -->
+  <AppDomains>
+    <AppDomain>https://www.intellisync.ai</AppDomain> <!-- Update or add additional app domains if needed -->
+  </AppDomains>
+  <Hosts>
+    <Host Name="Workbook"/>
+  </Hosts>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://intellisync.ai/add-in/taskpane.html"/> <!-- Update the source location URL -->
+  </DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="Workbook">
+        <DesktopFormFactor>
+          <FunctionFile resid="Commands.Url"/> <!-- Ensure this points to your commands.html -->
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <OfficeTab id="TabHome">
+              <Group id="CommandsGroup">
+                <Label resid="CommandsGroup.Label"/>
+                <Icon>
+                  <bt:Image size="16" resid="Icon.16x16"/>
+                  <bt:Image size="32" resid="Icon.32x32"/>
+                  <bt:Image size="80" resid="Icon.80x80"/>
+                </Icon>
+                <Control xsi:type="Button" id="TaskpaneButton">
+                  <Label resid="TaskpaneButton.Label"/>
+                  <Supertip>
+                    <Title resid="TaskpaneButton.Label"/>
+                    <Description resid="TaskpaneButton.Tooltip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>ButtonId1</TaskpaneId>
+                    <SourceLocation resid="Taskpane.Url"/>
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Images>
+        <bt:Image id="Icon.16x16" DefaultValue="https://intellisync.ai/add-in/assets/icon-16.png"/> <!-- Update icon URL -->
+        <bt:Image id="Icon.32x32" DefaultValue="https://intellisync.ai/add-in/assets/icon-32.png"/> <!-- Update icon URL -->
+        <bt:Image id="Icon.80x80" DefaultValue="https://intellisync.ai/add-in/assets/icon-80.png"/> <!-- Update icon URL -->
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812"/> <!-- Update or remove this URL -->
+        <bt:Url id="Commands.Url" DefaultValue="https://intellisync.ai/add-in/commands.html"/> <!-- Ensure this points to your commands.html -->
+        <bt:Url id="Taskpane.Url" DefaultValue="https://intellisync.ai/add-in/taskpane.html"/> <!-- Update the task pane URL -->
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="GetStarted.Title" DefaultValue="Get started with your sample add-in!"/> <!-- Update title as needed -->
+        <bt:String id="CommandsGroup.Label" DefaultValue="Chat Commands"/> <!-- Update as needed -->
+        <bt:String id="TaskpaneButton.Label" DefaultValue="Open Chat"/> <!-- Update button label as needed -->
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="GetStarted.Description" DefaultValue="Your sample add-in loaded successfully. Click 'Open Chat' to get started."/> <!-- Update description as needed -->
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Click to open the chat interface"/> <!-- Update tooltip as needed -->
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+</OfficeApp>
