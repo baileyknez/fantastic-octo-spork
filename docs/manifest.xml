@@ -8,7 +8,7 @@
   <Version>1.0.0.0</Version>
   <ProviderName>IntelliSync AI</ProviderName> <!-- Update with your company/provider name -->
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="Chat Add-in"/> <!-- Update the display name -->
+  <DisplayName DefaultValue="IntelliSync AI Chat"/> <!-- Update the display name -->
   <Description DefaultValue="Interact with the Chat service directly from Excel."/> <!-- Update the description -->
   <IconUrl DefaultValue="https://baileyknez.github.io/fantastic-octo-spork/assets/icon-32.png"/> <!-- Update icon URL -->
   <HighResolutionIconUrl DefaultValue="https://baileyknez.github.io/fantastic-octo-spork/assets/icon-64.png"/> <!-- Update high resolution icon URL -->
