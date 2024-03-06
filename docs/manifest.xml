@@ -20,7 +20,7 @@
     <Host Name="Workbook"/>
   </Hosts>
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://baileyknez.github.io/fantastic-octo-spork/src/taskpane/assets/taskpane.html"/> <!-- Update the source location URL -->
+    <SourceLocation DefaultValue="https://baileyknez.github.io/fantastic-octo-spork/src/taskpane/taskpane.html"/> <!-- Update the source location URL -->
   </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
