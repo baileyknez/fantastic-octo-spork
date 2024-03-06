@@ -10,8 +10,8 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Chat Add-in"/> <!-- Update the display name -->
   <Description DefaultValue="Interact with the Chat service directly from Excel."/> <!-- Update the description -->
-  <IconUrl DefaultValue="https://intellisync.ai/add-in/assets/chat-icon-32.png"/> <!-- Update icon URL -->
-  <HighResolutionIconUrl DefaultValue="https://intellisync.ai/add-in/assets/chat-icon-64.png"/> <!-- Update high resolution icon URL -->
+  <IconUrl DefaultValue="https://baileyknez.github.io/fantastic-octo-spork/assets/icon-32.png"/> <!-- Update icon URL -->
+  <HighResolutionIconUrl DefaultValue="https://baileyknez.github.io/fantastic-octo-spork/assets/icon-64.png"/> <!-- Update high resolution icon URL -->
   <SupportUrl DefaultValue="https://www.intellisync.ai/contact"/> <!-- Update support URL -->
   <AppDomains>
     <AppDomain>https://www.intellisync.ai</AppDomain> <!-- Update or add additional app domains if needed -->
@@ -20,7 +20,7 @@
     <Host Name="Workbook"/>
   </Hosts>
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://intellisync.ai/add-in/taskpane.html"/> <!-- Update the source location URL -->
+    <SourceLocation DefaultValue="https://baileyknez.github.io/fantastic-octo-spork/src/taskpane/assets/taskpane.html"/> <!-- Update the source location URL -->
   </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
@@ -61,14 +61,14 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://github.com/baileyknez/fantastic-octo-spork/blob/main/docs/assets/icon-16.png"/> <!-- Update icon URL -->
-        <bt:Image id="Icon.32x32" DefaultValue="https://github.com/baileyknez/fantastic-octo-spork/blob/main/docs/assets/icon-32.png"/> <!-- Update icon URL -->
-        <bt:Image id="Icon.80x80" DefaultValue="https://github.com/baileyknez/fantastic-octo-spork/blob/main/docs/assets/icon-80.png"/> <!-- Update icon URL -->
+        <bt:Image id="Icon.16x16" DefaultValue="https://baileyknez.github.io/fantastic-octo-spork/assets/icon-16.png"/> <!-- Update icon URL -->
+        <bt:Image id="Icon.32x32" DefaultValue="https://baileyknez.github.io/fantastic-octo-spork/assets/icon-32.png"/> <!-- Update icon URL -->
+        <bt:Image id="Icon.80x80" DefaultValue="https://baileyknez.github.io/fantastic-octo-spork/assets/icon-80.png"/> <!-- Update icon URL -->
       </bt:Images>
       <bt:Urls>
         <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812"/> <!-- Update or remove this URL -->
-        <bt:Url id="Commands.Url" DefaultValue="https://github.com/baileyknez/fantastic-octo-spork/blob/main/docs/assets/commands.html"/> <!-- Ensure this points to your commands.html -->
-        <bt:Url id="Taskpane.Url" DefaultValue="https://github.com/baileyknez/fantastic-octo-spork/blob/main/docs/assets/taskpane.html"/> <!-- Update the task pane URL -->
+        <bt:Url id="Commands.Url" DefaultValue="https://baileyknez.github.io/fantastic-octo-spork/src/commands/commands.html"/> <!-- Ensure this points to your commands.html -->
+        <bt:Url id="Taskpane.Url" DefaultValue="https://baileyknez.github.io/fantastic-octo-spork/src/taskpane/assets/taskpane.html"/> <!-- Update the task pane URL -->
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="Get started with your sample add-in!"/> <!-- Update title as needed -->
